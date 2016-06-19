@@ -91,25 +91,7 @@ Example client script for JQUERY:AJAX -> PHP:MYSQL example
 
 
       function comment(a){
-        var commentForm = '<form class="form-horizontal" name="feedbackForm" id="'+a+'nnn'+'"" novalidate>
-                            <div class="form-group">
-                                <label for="firstname" class="col-sm-2 control-label">Name</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" id="firstname" name="name" placeholder="Enter Name"  required>
-                                </div>
-                            </div>                 
-                            <div class="form-group">
-                                <label for="feedback" class="col-sm-2 control-label">Your Comment</label>
-                                <div class="col-md-6">
-                                    <textarea class="form-control" rows="12" id="Mir" name="text"></textarea>
-                                </div>
-                            </div> 
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-2">
-                                    <button type="submit" class="btn btn-primary">Send Comment</button>
-                                </div>
-                            </div>
-                        </form>';
+        var commentForm = '<form class="form-horizontal" name="feedbackForm" id=' + a + 'nnn' + ' novalidate><div class="form-group"><label for="firstname" class="col-sm-2 control-label">Name</label><div class="col-md-6"><input type="text" class="form-control" id="firstname" name="name" placeholder="Enter Name"  required></div></div><div class="form-group"><label for="feedback" class="col-sm-2 control-label">Your Comment</label><div class="col-md-6"><textarea class="form-control" rows="12" id="Mir" name="text"></textarea></div></div><div class="form-group"> <div class="col-md-6 col-md-offset-2"><button type="submit" class="btn btn-primary">Send Comment</button></div></div></form>';
 
         if($("#"+a+'nnn').length===0){
          
