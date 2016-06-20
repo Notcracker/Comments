@@ -9,26 +9,24 @@
   <body>
 
  
-  <div class='col-md-offset-2'>
-    <h2> Client example </h2>
-    <h3 class='col-md-offset-2'>Output: </h3>
+  
+ <div class='container-fluid'>
+    <div class='jumbotron'>
+      <h1>Some Article</h1>
+    </div>
   </div>
+  <hr>
   <div id="output">this element will be accessed by jquery and this text replaced</div>
-  <form class="form-horizontal" name="feedbackForm" id='idForm' novalidate>
-      <div class="form-group">
-          <label for="firstname" class="col-sm-2 control-label">Name</label>
-          <div class="col-md-6">
-              <input type="text" class="form-control" id="firstname" name="name" placeholder="Enter Name"  required>
-          </div>
-      </div>                 
+  <hr>
+  <form class="form-horizontal" name="feedbackForm" id='idForm' novalidate>               
       <div class="form-group">
           <label for="feedback" class="col-sm-2 control-label">Your Comment</label>
-          <div class="col-md-6">
+          <div class="col-md-4">
               <textarea class="form-control" rows="12" id='Mir' name='text'></textarea>
           </div>
       </div> 
       <div class="form-group">
-          <div class="col-md-6 col-md-offset-2">
+          <div class="col-md-4 col-md-offset-2">
               <button type="submit" class="btn btn-primary">Send Comment</button>
           </div>
       </div>
