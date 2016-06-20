@@ -1,0 +1,18 @@
+mysql> show tables;
++--------------------+
+| Tables_in_comments |
++--------------------+
+| comments           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> describe comments;
++-----------+----------------------+------+-----+---------+----------------+
+| Field     | Type                 | Null | Key | Default | Extra          |
++-----------+----------------------+------+-----+---------+----------------+
+| id        | smallint(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| parent_id | smallint(5) unsigned | YES  | MUL | NULL    |                |
+| message   | text                 | NO   |     | NULL    |                |
+| depth     | smallint(5) unsigned | YES  |     | NULL    |                |
++-----------+----------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
