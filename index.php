@@ -62,7 +62,7 @@
                    }
                  });
         $('#idForm textarea').val('');
-            e.preventDefault(); // avoid to execute the actual submit of the form.
+            e.preventDefault(); 
         });
 
 
