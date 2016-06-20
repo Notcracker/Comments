@@ -1,8 +1,3 @@
-                                        
-
-<!---------------------------------------------------------------------------
-Example client script for JQUERY:AJAX -> PHP:MYSQL example
----------------------------------------------------------------------------->
 
 <html>
   <head>    
@@ -13,12 +8,10 @@ Example client script for JQUERY:AJAX -> PHP:MYSQL example
   </head>
   <body>
 
-  <!-------------------------------------------------------------------------
-  1) Create some html content that can be accessed by jquery
-  -------------------------------------------------------------------------->
+ 
   <div class='col-md-offset-2'>
     <h2> Client example </h2>
-    <h3>Output: </h3>
+    <h3 class='col-md-offset-2'>Output: </h3>
   </div>
   <div id="output">this element will be accessed by jquery and this text replaced</div>
   <form class="form-horizontal" name="feedbackForm" id='idForm' novalidate>
@@ -45,25 +38,15 @@ Example client script for JQUERY:AJAX -> PHP:MYSQL example
 
   $(function () 
   {
-    //-----------------------------------------------------------------------
-    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
-    //-----------------------------------------------------------------------
     $.ajax({
-      url: 'api.php',                  //the script to call to get data          
-      data: "",                        //you can insert url argumnets here to pass to api.php
-                                       //for example "id=5&parent=6"
-      dataType: 'html',                //data format      
-        success: function(data)          //on recieve of reply
+      url: 'api.php',                         
+      data: "",                        
+      dataType: 'html',                      
+        success: function(data)          
       {
-      //  var id = data[0];              //get id
-       // var vname = data[1];           //get name
-        //--------------------------------------------------------------------
-        // 3) Update html content
-        //--------------------------------------------------------------------
-       
+      
         $('#output').html(data); //Set output element html
-        //recommend reading up on jquery selectors they are awesome 
-        // http://api.jquery.com/category/selectors/
+       
       } 
         });
 
@@ -73,10 +56,10 @@ Example client script for JQUERY:AJAX -> PHP:MYSQL example
         $.ajax({
                    type: "POST",
                    url: 'api.php',
-                   data: {'vals' : $("#idForm").serialize()}, 
+                   data: {'vals' : $("#idForm").serialize(), 'parent_id':null}, 
                    success: function(data)
                    {
-                      console.log(data);
+                      
                        alert(data);
                        $('#output').html(data);  
                    }
@@ -103,7 +86,38 @@ Example client script for JQUERY:AJAX -> PHP:MYSQL example
           
           console.log($("#"+a+'nnn'));
         }
+
+
+      $("#"+a+'nnn').submit(function(e) {
+
+
+        $.ajax({
+                   type: "POST",
+                   url: 'api.php',
+                   data: {'vals' : $("#"+a+'nnn').serialize(),'parent_id':a}, 
+                   success: function(data)
+                   {
+                       $('#output').html(data);  
+                   }
+                 });
+          e.preventDefault();
+        });
+
       };
+
+      function deleteCom(a) {
+
+        $.ajax({
+                   type: "PUT",
+                   url: 'api.php',
+                   data: {'id':a}, 
+                   success: function(data)
+                   {
+                       $('#output').html(data);  
+                   }
+                 });
+        
+      }
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
