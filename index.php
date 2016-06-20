@@ -19,9 +19,9 @@
   <hr>
   <form class="form-horizontal" name="feedbackForm" id='idForm' novalidate>               
       <div class="form-group">
-          <label for="feedback" class="col-sm-2 control-label">Your Comment</label>
+          <label for="comment" class="col-sm-2 control-label">Your Comment</label>
           <div class="col-md-4">
-              <textarea class="form-control" rows="12" id='Mir' name='text'></textarea>
+              <textarea class="form-control" rows="12" id='comment' name='text'></textarea>
           </div>
       </div> 
       <div class="form-group">
