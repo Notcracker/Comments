@@ -3,8 +3,7 @@
   <head>    
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
-  <script id="source" language="javascript" type="text/javascript">
-  </script>
+  
   </head>
   <body>
 
@@ -16,7 +15,7 @@
     </div>
   </div>
   <hr>
-  <div id="output">this element will be accessed by jquery and this text replaced</div>
+  <div id="output"></div>
   <hr>
   <form class="form-horizontal" name="feedbackForm" id='idForm' novalidate>               
       <div class="form-group">
